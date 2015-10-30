@@ -113,21 +113,24 @@ http://laravel5.emao.com/auth/login
 你试着使用 http://laravel5.emao.com/auth/login 访问，能访问表示成功了。
 
 ## 5、安装Git
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
+Git的安装是为了代码托管，也就是所谓的开源，开源了别人也可以帮你检查和改进代码，当然隐私或涉及机密的就别Git上去了，比如你的银行卡和银行卡密码，Github也有私有托管，不过是要花银子的。
+
+怎样安装大家可以看线上的教程了。
+
+# git - 简明指南
+http://rogerdudler.github.io/git-guide/index.zh.html
+
+# 一些常用的命令
+git config --list
+git clone https://github.com/romy2012/emao.git
+git status
+git add *
+git commit -m "本地文件搭建测试"
+git push origin master
 
 
+#  相关涉及到的解决方案
 
 
 # Git Push 避免重复输入用户名和密码方法
