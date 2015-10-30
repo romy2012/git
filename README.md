@@ -1,27 +1,27 @@
 # 1、下载并安装 WampServer
 
 ## 执行命令
-    php --version 
+        php --version 
 测试是否安装成功
 
-    C:\Users\pc>php --version
-    PHP 5.5.12 (cli) (built: Apr 30 2014 11:20:58)
-    Copyright (c) 1997-2014 The PHP Group
-    Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+        C:\Users\pc>php --version
+        PHP 5.5.12 (cli) (built: Apr 30 2014 11:20:58)
+        Copyright (c) 1997-2014 The PHP Group
+        Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
         with Xdebug v2.2.5, Copyright (c) 2002-2014, by Derick Rethans
 
 # 2、安装 Composer
 ## 执行命令
-    Composer --version
+        Composer --version
 测试是否安装成功
-    C:\Users\pc>Composer --version
-    Composer version 1.0-dev (c557715669ba8dd2dc6c63859f919351a4aa5e2f) 2015-10-28 14:13:03
+        C:\Users\pc>Composer --version
+        Composer version 1.0-dev (c557715669ba8dd2dc6c63859f919351a4aa5e2f) 2015-10-28 14:13:03
 
 更新Composer到最新版本
-    composer self-update
+        composer self-update
 
 ## 2.1、 进入到 E:\wamp\www 目录 右键> Use Composer here
-    composer create-project laravel/laravel laravel5 5.0.22
+        composer create-project laravel/laravel laravel5 5.0.22
 执行命令下载安装 Laravel5.0.22
 这里安装的是5.0.22，安装目录为laravel5
 
@@ -38,41 +38,41 @@ host2.emao.com 研究 host2的程序
 
 ## 进入 E:\wamp\bin\apache\apache2.4.9\conf
 打开 httpd.conf 找到 # Virtual hosts 并修改为
-    # Virtual hosts
-    Include conf/extra/httpd-vhosts.conf
+        # Virtual hosts
+        Include conf/extra/httpd-vhosts.conf
 
 ## 进入 E:\wamp\bin\apache\apache2.4.9\conf\extra
 打开 httpd-vhosts.conf 添加
 
-<Directory "E:\wamp\www">
-AllowOverride All
-Order Deny,Allow
-Allow from all
-</Directory>
-
-<VirtualHost *:80>
-ServerName 192.168.1.78
-DocumentRoot "E:\wamp\www"
-</VirtualHost>
-
-<VirtualHost *:80>
-ServerName hosts.emao.com
-DocumentRoot "E:\wamp\www"
-</VirtualHost>
-
-Alias /laravel5 "E:\wamp\www\laravel5\public"
-
-<Directory "E:\wamp\www\laravel5\public">
-AllowOverride All
-Order Deny,Allow
-Allow from all
-</Directory>
-
-<VirtualHost *:80>
-ServerName laravel5.emao.com
-ServerAlias laravel5.emao.com
-DocumentRoot "E:\wamp\www\laravel5\public"
-</VirtualHost>
+        <Directory "E:\wamp\www">
+        AllowOverride All
+        Order Deny,Allow
+        Allow from all
+        </Directory>
+        
+        <VirtualHost *:80>
+        ServerName 192.168.1.78
+        DocumentRoot "E:\wamp\www"
+        </VirtualHost>
+        
+        <VirtualHost *:80>
+        ServerName hosts.emao.com
+        DocumentRoot "E:\wamp\www"
+        </VirtualHost>
+        
+        Alias /laravel5 "E:\wamp\www\laravel5\public"
+        
+        <Directory "E:\wamp\www\laravel5\public">
+        AllowOverride All
+        Order Deny,Allow
+        Allow from all
+        </Directory>
+        
+        <VirtualHost *:80>
+        ServerName laravel5.emao.com
+        ServerAlias laravel5.emao.com
+        DocumentRoot "E:\wamp\www\laravel5\public"
+        </VirtualHost>
 
 这里分别为权限配置、局域网指向、本地指向和laravel5的测试指向，这样做是为了更好地分开做不同的研究。
 
@@ -89,23 +89,23 @@ image: http://blog.cmstutorials.org/wp-content/uploads/2009/11/activate_rewrite_
 
 激活后，修改 E:\wamp\www\laravel5\public 下的 .htaccess 文件为：
 
-<IfModule mod_rewrite.c>
-<IfModule mod_negotiation.c>
-Options -MultiViews
-</IfModule>
-
-RewriteEngine On
-RewriteBase /laravel5/
-
-# Redirect Trailing Slashes If Not A Folder...
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-# Handle Front Controller...
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
-</IfModule>
+        <IfModule mod_rewrite.c>
+        <IfModule mod_negotiation.c>
+        Options -MultiViews
+        </IfModule>
+        
+        RewriteEngine On
+        RewriteBase /laravel5/
+        
+        # Redirect Trailing Slashes If Not A Folder...
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)/$ /$1 [L,R=301]
+        
+        # Handle Front Controller...
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^ index.php [L]
+        </IfModule>
 
 重启下wamp
 
@@ -141,23 +141,23 @@ RewriteRule ^ index.php [L]
 ## 在%HOME%目录中，一般为C:\users\Administrator，也可以是你自己创建的系统用户名目录，反正都在C:\users\中。
 ## 文件名为.git-credentials,由于在Window中不允许直接创建以"."开头的文件，所以需要借助git bash进行，打开git bash客户端，进行%HOME%目录，然后用touch创建文件 .git-credentials, 用vim编辑此文件，输入内容格式：
 
-    touch .git-credentials
-
-    vim .git-credentials
-
-    https://{username}:{password}@github.com
+        touch .git-credentials
+        
+        vim .git-credentials
+        
+        https://{username}:{password}@github.com
 
 ## 1.2 添加Git Config 内容
 
 ## 进入git bash终端， 输入如下命令：
 
-    git config --global credential.helper store
+        git config --global credential.helper store
 
 ## 执行完后查看%HOME%目录下的.gitconfig文件，会多了一项：
 
-    [credential]
-
-    helper = store
+        [credential]
+        
+        helper = store
 重新开启git bash会发现git push时不用再输入用户名和密码
 
 
@@ -170,8 +170,8 @@ RewriteRule ^ index.php [L]
 
 ## 进入%HOME%目录，新建一个名为"_netrc"的文件，文件中内容格式如下：
 
-    machine {git account name}.github.com
-    login your-usernmae
-    password your-password
+        machine {git account name}.github.com
+        login your-usernmae
+        password your-password
 
 ## 重新打开git bash即可，无需再输入用户名和密码
