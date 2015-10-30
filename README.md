@@ -29,7 +29,7 @@
 http://localhost/laravel/public/
 http://localhost/laravel/public/index.php/home
 
-## 以上安装成功后，我们可能要建立多个虚拟主机
+## 3、以上安装成功后，我们可能要建立多个虚拟主机
 为何要建立多个虚拟主机呢？
 有时我们可以下载多个开源框架或者程序来研究哪些框架或程序要好。
 比如：
@@ -76,7 +76,7 @@ host2.emao.com 研究 host2的程序
 
 这里分别为权限配置、局域网指向、本地指向和laravel5的测试指向，这样做是为了更好地分开做不同的研究。
 
-## 启用rewrite module
+## 4、启用rewrite module
 
 主要是让URL更短更易记，如
 http://laravel5.emao.com/index.php/auth/login
@@ -85,7 +85,8 @@ http://laravel5.emao.com/auth/login
 
 ## 步骤
 按照上面的httpd-vhosts.conf配置后，需要启用wamp的rewrite module，如图：
-image: http://blog.cmstutorials.org/wp-content/uploads/2009/11/activate_rewrite_module1.jpg
+![](http://blog.cmstutorials.org/wp-content/uploads/2009/11/activate_rewrite_module1.jpg)
+
 
 激活后，修改 E:\wamp\www\laravel5\public 下的 .htaccess 文件为：
 
@@ -111,7 +112,7 @@ image: http://blog.cmstutorials.org/wp-content/uploads/2009/11/activate_rewrite_
 
 你试着使用 http://laravel5.emao.com/auth/login 访问，能访问表示成功了。
 
-#
+## 5、安装Git
 #
 #
 #
