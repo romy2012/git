@@ -27,7 +27,46 @@
 
 输入本地地址测试是否安装成功
 http://localhost/laravel/public/
-http://laravel5.emao.com/index.php/home
+http://localhost/laravel/public/index.php/home
+
+## 以上安装成功后，我们可能要建立多个虚拟主机
+为何要建立多个虚拟主机呢？
+有时我们可以下载多个开源框架或者程序来研究哪些框架或程序要好。
+比如：
+host1.emao.com 研究 host1的程序
+host2.emao.com 研究 host2的程序
+
+## 进入 E:\wamp\bin\apache\apache2.4.9\conf
+打开 httpd.conf 找到 # Virtual hosts 并修改为
+    # Virtual hosts
+    Include conf/extra/httpd-vhosts.conf
+
+## 进入 E:\wamp\bin\apache\apache2.4.9\conf\extra
+打开 httpd-vhosts.conf 添加
+
+<Directory "E:\wamp\www">
+AllowOverride All
+Order Deny,Allow
+Allow from all
+</Directory>
+
+<VirtualHost *:80>
+ServerName 192.168.1.78
+DocumentRoot "E:\wamp\www"
+</VirtualHost>
+
+<VirtualHost *:80>
+ServerName hosts.emao.com
+DocumentRoot "E:\wamp\www"
+</VirtualHost>
+
+<VirtualHost *:80>
+ServerName laravel5.emao.com
+DocumentRoot "E:\wamp\www\laravel5\public"
+</VirtualHost>
+
+这里分别为权限配置、局域网指向、本地指向和laravel5的测试指向，这样做是为了更好地分开做不同的研究。
+
 
 
 
