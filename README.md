@@ -1,3 +1,37 @@
+# 1、下载并安装 WampServer
+
+## 执行命令
+    php --version 
+测试是否安装成功
+
+    C:\Users\pc>php --version
+    PHP 5.5.12 (cli) (built: Apr 30 2014 11:20:58)
+    Copyright (c) 1997-2014 The PHP Group
+    Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+        with Xdebug v2.2.5, Copyright (c) 2002-2014, by Derick Rethans
+
+# 2、安装 Composer
+## 执行命令
+    Composer --version
+测试是否安装成功
+    C:\Users\pc>Composer --version
+    Composer version 1.0-dev (c557715669ba8dd2dc6c63859f919351a4aa5e2f) 2015-10-28 14:13:03
+
+更新Composer到最新版本
+    composer self-update
+
+## 2.1、 进入到 E:\wamp\www 目录 右键> Use Composer here
+    composer create-project laravel/laravel laravel5 5.0.22
+执行命令下载安装 Laravel5.0.22
+这里安装的是5.0.22，安装目录为laravel5
+
+输入本地地址测试是否安装成功
+http://localhost/laravel/public/
+http://laravel5.emao.com/index.php/home
+
+
+
+
 # Git Push 避免重复输入用户名和密码方法
 ## 前言
 
