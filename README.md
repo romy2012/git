@@ -1,5 +1,6 @@
 
-# *WampServer+Composer+Git 打造本地PHP开发环境*
+# *WampServer+Composer+Git*
+# *打造本地PHP开发环境*
 
 # 1、下载并安装 WampServer
 
