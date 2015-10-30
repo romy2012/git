@@ -116,7 +116,29 @@ http://laravel5.emao.com/auth/login
 
 你试着使用 http://laravel5.emao.com/auth/login 访问，能访问表示成功了。
 
-## 5、安装Git
+## 5、创建数据库
+
+# 点击wamp托盘图标进入phpmyadmin
+http://localhost/phpmyadmin/
+创建一个MYSQL数据库用户和数据库
+
+# 进入E:\wamp\www\laravel5\config\database.php 配置数据库，如：
+
+		'mysql' => [
+			'driver'    => 'mysql',
+			'host'      => env('DB_HOST', 'localhost'),
+			'database'  => env('DB_DATABASE', 'laravel'),
+			'username'  => env('DB_USERNAME', 'laravel'),
+			'password'  => env('DB_PASSWORD', 'laravel12345'),
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'strict'    => false,
+		],
+
+
+
+## 6、安装Git
 
 Git的安装是为了代码托管，也就是所谓的开源，开源了别人也可以帮你检查和改进代码，当然隐私或涉及机密的就别Git上去了，比如你的银行卡和银行卡密码，Github也有私有托管，不过是要花银子的。
 
