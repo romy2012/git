@@ -1,6 +1,6 @@
 
 # *WampServer+Composer+laravel5+Git*
-# *打造本地PHP开发环境*
+# *打造本地PHP+mysql开发环境*
 
 # 1、下载并安装 WampServer
 
