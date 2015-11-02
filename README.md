@@ -172,11 +172,17 @@ php artisan migrate
 http://rogerdudler.github.io/git-guide/index.zh.html
 
 # 一些常用的git命令
+
 git config --list
+
 git clone https://github.com/romy2012/emao.git
+
 git status
+
 git add *
+
 git commit -m "本地文件搭建测试"
+
 git push origin master
 
 #  Git使用中相关涉及到的解决方案
