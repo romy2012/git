@@ -124,9 +124,9 @@ RewriteRule ^ index.php [L]
 
 ## 5、创建数据库
 
-# 点击wamp托盘图标进入phpmyadmin 的 http://localhost/phpmyadmin/，创建一个MYSQL数据库用户和数据库。
+## 点击wamp托盘图标进入phpmyadmin 的 http://localhost/phpmyadmin/，创建一个MYSQL数据库用户和数据库。
 
-# 进入E:\wamp\www\laravel5\config\database.php 配置数据库，如：
+## 进入E:\wamp\www\laravel5\config\database.php 配置数据库，如：
 
 		'mysql' => [
 			'driver'    => 'mysql',
